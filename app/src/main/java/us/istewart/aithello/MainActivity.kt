@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.util.Log
 import android.view.inputmethod.InputMethodManager
+import kotlin.system.exitProcess
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,8 +31,11 @@ class MainActivity : AppCompatActivity() {
                 Log.d("INPUT_ERR", "Keyboard already hidden")
             }
 
-            var num1 = etName1.text.toString().toDouble()
-            var num2 = etName2.text.toString().toDouble()
+            var num1 = 0.0
+            var num2 = 0.0
+            if (etName1.text.toString() != "") num1 = etName1.text.toString().toDouble()
+            if (etName2.text.toString() != "") num2 = etName2.text.toString().toDouble()
+
             etName1.text.clear()
             etName2.text.clear()
 
