@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AITHello</string>
+    <string name="app_name">Simple Calculator</string>
     <string name="firstOp">1st Operand</string>
     <string name="secondOp">2nd Operand</string>
 </resources>
