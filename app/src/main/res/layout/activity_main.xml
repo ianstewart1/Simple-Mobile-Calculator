@@ -11,12 +11,14 @@
     <EditText
         android:id="@+id/etName1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
 
     <EditText
         android:id="@+id/etName2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
 
     <GridLayout
         android:layout_width="wrap_content"

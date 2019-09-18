@@ -10,6 +10,7 @@ import androidx.core.app.ComponentActivity
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.util.Log
 import android.view.inputmethod.InputMethodManager
 
 
@@ -18,21 +19,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        etName1.hint = getString(R.string.firstOp)
+        etName2.hint = getString(R.string.secondOp)
 
         fun onButtonPress() :Pair<Double, Double> {
             try {
                 val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
             } catch (e: Exception) {
-                // TODO: handle exception
+                Log.d("INPUT_ERR", "Keyboard already hidden")
             }
 
             var num1 = etName1.text.toString().toDouble()
             var num2 = etName2.text.toString().toDouble()
             // TODO: check for input validity!!!
-            // TODO: clear text entry boxes!!!
-            // TODO: add labeling for operand boxes
-            
+            etName1.text.clear()
+            etName2.text.clear()
+
             return Pair(num1, num2)
         }
 
