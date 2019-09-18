@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
 
             var num1 = etName1.text.toString().toDouble()
             var num2 = etName2.text.toString().toDouble()
-            // TODO: check for input validity!!!
             etName1.text.clear()
             etName2.text.clear()
 
