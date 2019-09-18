@@ -4,3 +4,5 @@ I am beginning to explore mobile software development, and decided that a simple
 
 ### Simple Calculator GUI:
 <img src="./Screenshot/screenshot.png" alt="drawing" width="200"/>
+
+After entering operands, the user must click on an operation and the result will appear underneath the operation buttons.
